@@ -1,0 +1,10 @@
+<md-card>
+  <md-card-content>
+    <div>Current Count: {{ counter | async }}</div>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button (click)="increment()">Increment</button>
+    <button md-raised-button (click)="decrement()">Decrement</button>
+    <button md-raised-button (click)="reset()">Reset Counter</button>
+  </md-card-actions>
+</md-card>
