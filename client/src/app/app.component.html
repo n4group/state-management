@@ -1,5 +1,7 @@
 <h1>
-  {{title}}
+  {{ title }}
 </h1>
 
+<rx-state></rx-state>
+<md-card style="margin-bottom: 12px; margin-top: 12px;">Parent Subscribes Count: {{ counter | async }}</md-card>
 <rx-counter></rx-counter>

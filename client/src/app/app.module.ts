@@ -10,11 +10,13 @@ import { counterReducer } from './counter/counter.reducer';
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
+import { StateComponent } from './state/state.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterComponent
+    CounterComponent,
+    StateComponent
   ],
   imports: [
     BrowserModule,

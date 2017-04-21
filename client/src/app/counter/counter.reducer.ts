@@ -4,18 +4,25 @@ export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const RESET = 'RESET';
 
-export function counterReducer(state: number = 0, action: Action) {
-	switch (action.type) {
-		case INCREMENT:
-			return state + 1;
+const handlers = {};
 
-		case DECREMENT:
-			return state - 1;
+handlers[INCREMENT] = (state, action: Action) => {
+	return state + 1;
+}
 
-		case RESET:
-			return 0;
+handlers[DECREMENT] = (state, action: Action) => {
+	return state - 1;
+}
 
-		default:
-			return state;
+handlers[RESET] = (state, action: Action) => {
+	return 0;
+}
+
+export const counterReducer = (state: number = 0, action: Action) => {
+	let handler = handlers[action.type];
+	if(handler) {
+		return handler(state, action);
 	}
+
+	return state;
 }

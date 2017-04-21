@@ -16,12 +16,11 @@ interface State {
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit {
-
   counter: Observable<number>;
 
 	constructor(private store: Store<State>) {
-		this.counter = store.select('counter');
-	}
+    this.counter = this.store.select('counter');
+  }
 
   ngOnInit() {
 
