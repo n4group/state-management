@@ -18,7 +18,16 @@ handlers[RESET] = (state, action: Action) => {
 	return 0;
 }
 
-export const counterReducer = (state: number = 0, action: Action) => {
+// export const counterReducer = (state: number = 0, action: Action) => {
+// 	let handler = handlers[action.type];
+// 	if(handler) {
+// 		return handler(state, action);
+// 	}
+//
+// 	return state;
+// }
+
+export function counterReducer(state: number = 0, action: Action) {
 	let handler = handlers[action.type];
 	if(handler) {
 		return handler(state, action);
