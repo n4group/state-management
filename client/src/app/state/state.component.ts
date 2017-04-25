@@ -7,7 +7,7 @@ interface State {
 }
 
 @Component({
-  selector: 'rx-state',
+  selector: 'app-state',
   templateUrl: './state.component.html',
   styleUrls: ['./state.component.css']
 })

@@ -8,16 +8,20 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 
 import { counterReducer } from './counter/counter.reducer';
+import { countersReducer } from './counters/counters.reducer';
+
 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
 import { StateComponent } from './state/state.component';
+import { CountersComponent } from './counters/counters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    StateComponent
+    StateComponent,
+    CountersComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,10 @@ import { StateComponent } from './state/state.component';
     HttpModule,
     MaterialModule,
     FlexLayoutModule,
-    StoreModule.provideStore({ counter: counterReducer })
+    StoreModule.provideStore({
+      counter: counterReducer,
+      counters: countersReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

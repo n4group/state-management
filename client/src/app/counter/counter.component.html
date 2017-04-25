@@ -1,10 +1,15 @@
 <md-card>
+  <md-card-title>
+    <div>state property named: 'counter' (s. Application State)</div>
+  </md-card-title>
+
   <md-card-content>
     <div>Current Count: {{ counter | async }}</div>
   </md-card-content>
+
   <md-card-actions>
-    <button md-raised-button (click)="increment()">Increment</button>
-    <button md-raised-button (click)="decrement()">Decrement</button>
-    <button md-raised-button (click)="reset()">Reset Counter</button>
+    <button md-raised-button (click)="decrement()">Decrement <md-icon>remove</md-icon></button>
+    <button md-raised-button (click)="increment()">Increment <md-icon>add</md-icon></button>
+    <button md-raised-button (click)="reset()">Reset Counter <md-icon>check</md-icon></button>
   </md-card-actions>
 </md-card>

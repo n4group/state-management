@@ -11,7 +11,7 @@ interface State {
 }
 
 @Component({
-  selector: 'rx-counter',
+  selector: 'app-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.css']
 })

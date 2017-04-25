@@ -1,1 +1,7 @@
-<md-card>Current State: {{ state | async | json }}</md-card>
+<md-card>
+  <md-card-title>Application State</md-card-title>
+
+  <md-card-content>
+    <pre>{{ state | async | json }}</pre>
+  </md-card-content>
+</md-card>

@@ -1,7 +1,26 @@
-<h1>
-  {{ title }}
-</h1>
-
-<rx-state></rx-state>
 <md-card style="margin-bottom: 12px; margin-top: 12px;">Parent Subscribes Count: {{ counter | async }}</md-card>
-<rx-counter></rx-counter>
+<app-counter></app-counter>
+
+<br>
+<br>
+<br>
+
+<md-card style="margin-bottom: 12px; margin-top: 12px;">
+  Amount of counters: {{ (counters | async)?.length }}
+</md-card>
+
+<md-card style="margin-bottom: 12px; margin-top: 12px;">
+  Amount of counters: {{ countersLength | async }}
+</md-card>
+
+<md-card style="margin-bottom: 12px; margin-top: 12px;">
+  Sum counters = {{ stack | async }}
+</md-card>
+
+<app-counters></app-counters>
+
+<br>
+<br>
+<br>
+
+<app-state></app-state>

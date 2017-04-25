@@ -1,0 +1,15 @@
+<md-list>
+  <md-list-item *ngFor="let counter of counters | async; let i = index;">
+    <div>
+      <button md-raised-button (click)="decrement(i)">Decrement <md-icon>remove</md-icon></button>
+      <button md-raised-button (click)="increment(i)">Increment <md-icon>add</md-icon></button>
+    </div>
+    <div style="padding: 12px;">index: {{ i }}, value: {{ counter }}</div>
+  </md-list-item>
+</md-list>
+
+<md-card>
+  <md-card-actions>
+    <button md-raised-button (click)="add()">Add Counter</button>
+  </md-card-actions>
+</md-card>
